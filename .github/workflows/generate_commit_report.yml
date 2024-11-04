@@ -1,0 +1,27 @@
+# .github/workflows/generate_commit_report.yml
+name: Generate All Commits Report
+
+# Enable manual trigger
+on:
+  workflow_dispatch: # Allows you to run the action manually from GitHub's Actions tab
+
+jobs:
+  generate-report:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Step 1: Check out the repository
+      - name: Check out repository
+        uses: actions/checkout@v3
+
+      # Step 2: Generate the commit report with all commits
+      - name: Generate commit report
+        run: |
+          git log --pretty=format:"%h,%an,%ad,%s" --date=short > commit_report.csv
+
+      # Step 3: Upload the report as an artifact
+      - name: Upload commit report
+        uses: actions/upload-artifact@v3
+        with:
+          name: commit_report
+          path: commit_report.csv

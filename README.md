@@ -93,7 +93,7 @@ The English Proficiency Tool, developed for the Gen-AI MOE Challenge, is a compr
    - Currently, the tool does not support ongoing progress tracking. Each session’s results are displayed immediately after the test but are not saved for future reference.
 for details.
 
-### 7. Contact
+## 7. Contact
 
 For questions, feedback, or support regarding the English Proficiency Tool, please reach out to the project maintainers:
 

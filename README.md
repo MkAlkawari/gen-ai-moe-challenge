@@ -22,6 +22,7 @@ The English Proficiency Tool, developed for the Gen-AI MOE Challenge, is a compr
 
 ## 3. AWS Services Used
 
+- **Amazon Bedrock**: Powers AI-driven functionalities for the Speaking section by analyzing spoken responses and assists in evaluating exam results, providing accurate feedback based on natural language understanding.
 - **Amazon S3**: Stores user-uploaded content, such as audio responses and images.
 - **AWS Lambda**: Handles serverless computing, executing code for backend processing.
 - **Amazon DynamoDB**: NoSQL database used for storing user data and test scores.

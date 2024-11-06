@@ -37,7 +37,7 @@ The English Proficiency Tool, developed for the Gen-AI MOE Challenge, is a compr
 ## 5. Setup and Installation
 
 1. **Fork the Repository**  
-   - Begin by forking the repository from [https://github.com/bahrain-uob/gen-ai-moe-challenge.git](https://github.com/bahrain-uob/gen-ai-moe-challenge.git) to your GitHub account.
+   - Begin by forking the repository from [https://github.com/bahrain-uob/gen-ai-moe-challenge.git](https://github.com/bahrain-uob/gen-ai-moe-challenge.git) ](https://github.com/MkAlkawari/gen-ai-moe-challenge.git) to your GitHub account.
 
 2. **Create a New Project in CodeCatalyst**  
    - First, create a **Space** in CodeCatalyst if you haven’t done so already. Then, set up a new project within this Space and connect it to your cloned repository.

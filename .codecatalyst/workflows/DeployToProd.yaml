@@ -44,4 +44,3 @@ Actions:
       Name: Prod
     Compute:
       Type: EC2
-      Fleet: Linux.x86-64.Large

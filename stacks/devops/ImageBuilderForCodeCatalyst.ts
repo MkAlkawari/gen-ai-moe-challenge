@@ -61,27 +61,13 @@ export function ImageBuilderForCodeCatalyst({ stack, app }: StackContext) {
     },
   );
 
-  const instanceProfileForImageBuilder = new iam.InstanceProfile(
+  const existingRoleArn = 'arn:aws:iam::600627328431:role/DeploymentRoleForWorkFlow';
+
+  const instanceProfileForImageBuilder = new iam.CfnInstanceProfile(
     stack,
     'InstanceProfileForImageBuilder',
     {
-      role: new iam.Role(stack, 'EC2InstanceProfileForImageBuilder', {
-        assumedBy: new iam.ServicePrincipal('ec2.amazonaws.com'),
-        managedPolicies: [
-          {
-            managedPolicyArn:
-              'arn:aws:iam::aws:policy/AmazonSSMManagedInstanceCore',
-          },
-          {
-            managedPolicyArn:
-              'arn:aws:iam::aws:policy/EC2InstanceProfileForImageBuilder',
-          },
-          {
-            managedPolicyArn:
-              'arn:aws:iam::aws:policy/EC2InstanceProfileForImageBuilderECRContainerBuilds',
-          },
-        ],
-      }),
+      roles: [existingRoleArn.split('/').pop()!],
     },
   );
 
@@ -90,7 +76,7 @@ export function ImageBuilderForCodeCatalyst({ stack, app }: StackContext) {
     'ImageBuilderInfraConfig',
     {
       name: app.logicalPrefixedName('infra'),
-      instanceProfileName: instanceProfileForImageBuilder.instanceProfileName,
+      instanceProfileName: instanceProfileForImageBuilder.instanceProfileName || '',
     },
   );
 

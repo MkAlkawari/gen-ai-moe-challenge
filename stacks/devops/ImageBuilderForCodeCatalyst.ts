@@ -61,7 +61,7 @@ export function ImageBuilderForCodeCatalyst({ stack, app }: StackContext) {
     },
   );
 
-  const existingRoleArn = 'arn:aws:iam::600627328431:role/DeploymentRoleForWorkFlow';
+  const existingRoleArn = 'arn:aws:iam::600627328431:role/CodeCatalystWorkflowDevelopmentRole-Projects_iGA';
 
   const instanceProfileForImageBuilder = new iam.CfnInstanceProfile(
     stack,

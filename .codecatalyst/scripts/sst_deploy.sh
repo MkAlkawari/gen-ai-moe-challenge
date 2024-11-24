@@ -5,4 +5,4 @@ source ~/.bashrc
 nohup dockerd &
 docker version
 npm install
-npx sst deploy --stage --cloudformation-execution-policies prod
+npx sst deploy --stage prod

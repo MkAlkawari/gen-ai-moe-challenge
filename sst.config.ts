@@ -5,7 +5,7 @@ import { ApiStack } from './stacks/ApiStack';
 import { ImageBuilderForCodeCatalyst } from './stacks/devops/ImageBuilderForCodeCatalyst';
 import { OIDCForGitHubCI } from './stacks/devops/OIDCForGitHubCI';
 import { AuthStack } from './stacks/AuthStack';
-import { GrammarToolStack } from './stacks/GrammarToolStack';
+//import { GrammarToolStack } from './stacks/GrammarToolStack';
 
 export default {
   config(_input) {
